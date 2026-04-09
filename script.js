@@ -23,9 +23,11 @@
 //
 const img_carrosel = document.querySelectorAll('.slides img');
 const slides = document.querySelector('.slides');
-const btn_carrosel = document.querySelector('#btn-carrosel');
+const btn_carroselRight = document.querySelector('#btn-carrosel-right');
+
 let slideAtual = 0
-btn_carrosel.addEventListener('click', ()=>{
+
+btn_carroselRight.addEventListener('click', ()=>{
   console.log('cliquei');
     slideAtual++;
     if (slideAtual >= img_carrosel.length){
@@ -33,4 +35,16 @@ btn_carrosel.addEventListener('click', ()=>{
     };
     let altCarrosel = -slideAtual * 100;
     slides.style.transform = `translateX(${altCarrosel}%)`;   
+})
+
+const btn_carroselLeft = document.querySelector("#btn-carrosel-left");
+
+btn_carroselLeft.addEventListener('click', ()=>{
+  slideAtual--;
+  if (slideAtual < 0){
+    slideAtual = img_carrosel.length - 1;
+  };
+  let altCarrosel = -slideAtual * 100;
+  slides.style.transform = `translateX(${altCarrosel}%)`;
+
 })

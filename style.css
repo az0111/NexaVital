@@ -137,3 +137,29 @@ img {
   flex-shrink: 0;
   display: block;
 }
+
+.btn-carrosel {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  background-color: grey;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 10;
+}
+
+.btn-carrosel:hover {
+  background-color: white;
+  transform: translateY(-50%) scale(1.2);
+}
+
+#btn-carrosel-right{
+  right: 20px;
+}
+
+#btn-carrosel-left{
+  left:20px;
+}
